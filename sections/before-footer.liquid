@@ -1,0 +1,38 @@
+<link href="https://fonts.googleapis.com/css2?family=Nova+Cut&display=swap" rel="stylesheet"> 
+ <div class="footer_before">
+     <div class="container">
+        <div class="himaliyan_nari">
+           <h3>{{ section.settings.heading }}</h3>
+        </div>
+     </div>
+  </div>
+{% schema %}
+ 
+{
+    "name": "before-footer",
+    "settings": [
+          {
+            "id": "heading",
+            "type": "text",
+            "label": "Heading"
+        }
+   
+    ],
+    "presets": [
+      {
+        "name": "before-footer",
+        "category": "Text",
+        "settings": {
+
+        }
+      }
+    ]
+  }
+
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

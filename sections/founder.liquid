@@ -1,0 +1,67 @@
+<div class="{{ section.settings.section_css_class }}">
+<div class="founder_desc">
+    <h2>{{ section.settings.heading }}</h2>
+    <div class="founder_img"> <img src='{{ section.settings.Image | img_url: ' ' }}'></div>
+    <div class="wpb_wrapper">
+        <h3>{{ section.settings.subheading }}</h3>
+         <p>{{ section.settings.text }}</p>
+        <h3>{{ section.settings.label }}</h3>
+
+    </div>
+</div>
+</div>
+
+{% schema %}
+ 
+{
+    "name": "founder",
+    "settings": [
+      {
+        "type": "text",
+        "id": "section_css_class",
+        "label": "Section CSS Class"
+      },
+     {
+            "id": "Image",
+            "type": "image_picker",
+            "label": "Image"
+        },
+        {
+            "id": "heading",
+            "type": "text",
+            "label": "Heading"
+        },
+      {
+            "id": "subheading",
+            "type": "text",
+            "label": "Heading"
+        },
+       {
+            "id": "text",
+            "type": "textarea",
+            "label": "Text"
+        },
+        {
+            "id": "label",
+            "type": "textarea",
+            "label": "Text"
+        } 
+    ],
+    "presets": [
+      {
+        "name": "founder",
+        "category": "Text",
+        "settings": {
+
+        }
+      }
+    ]
+  }
+
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

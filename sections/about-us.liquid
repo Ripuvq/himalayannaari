@@ -1,0 +1,82 @@
+ <section class="about_sec">
+  <div class="container">
+      <div class="about_us flex">
+          <div class="col_left">
+                <img src='{{ section.settings.Image | img_url: ' ' }}'>
+          </div>
+          <div class="col_right">
+              <div class="about_text">
+                  <h2>{{ section.settings.heading }}</h2>
+                  <div class="p_text">
+                      <h3>{{ section.settings.text }}</h3>
+
+                      <h3>{{ section.settings.text2 }}</h3>
+
+                      <h3>{{ section.settings.text3 }}</h3>
+                      <a href="{{ section.settings.link }}" class="btn">Nari</a>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+</section>
+
+
+
+
+{% schema %}
+ 
+{
+    "name": "about-us",
+    "settings": [
+     {
+            "id": "Image",
+            "type": "image_picker",
+            "label": "Image"
+        },
+        {
+            "id": "heading",
+            "type": "text",
+            "label": "Heading"
+        },
+       {
+            "id": "text",
+            "type": "textarea",
+            "label": "Text"
+        },
+        {
+            "id": "text2",
+            "type": "textarea",
+            "label": "Text2"
+        },
+      {
+            "id": "text3",
+            "type": "textarea",
+            "label": "Text3"
+        },
+        {
+            "id": "link",
+            "type": "url",
+            "label": "Link"
+        }
+   
+    ],
+    "presets": [
+      {
+        "name": "about-us",
+        "category": "Text",
+        "settings": {
+
+        }
+      }
+    ]
+  }
+
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

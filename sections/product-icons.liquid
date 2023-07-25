@@ -1,0 +1,131 @@
+<div class="{{ section.settings.section_css_class }}">
+    <div class='mid_icons'>
+        <div class='mid_icons_inner'>
+            <div class='icon_box'>
+                <div class='about-image'>
+                    <a href="{{ section.settings.link1 }}">
+                        <img src='{{ section.settings.Image | img_url: ' ' }}'>
+                    </a>
+                </div>
+                <div class='heading_name'>
+                    <h5><a href="{{ section.settings.link1 }}">{{ section.settings.text }}</a></h5>
+                </div>
+            </div>
+            <div class='icon_box'>
+                <div class='about-image'>
+                    <a href="{{ section.settings.link2 }}">
+                        <img src='{{ section.settings.Image2 | img_url: ' ' }}'>
+                    </a>
+                </div>
+                <div class='heading_name'>
+                    <h5><a href="{{ section.settings.link2 }}">{{ section.settings.text2 }}</a></h5>
+                </div>
+            </div>
+            <div class='icon_box'>
+                <div class='about-image'>
+                    <a href="{{ section.settings.link3 }}">
+                        <img src='{{ section.settings.Image3 | img_url: ' ' }}'>
+                    </a>
+                </div>
+                <div class='heading_name'>
+                    <h5><a href="{{ section.settings.link3 }}">{{ section.settings.text3 }}</a></h5>
+                </div>
+            </div>
+            <div class='icon_box'>
+                <div class='about-image'>
+                    <a href="{{ section.settings.link4 }}">
+                        <img src='{{ section.settings.Image4 | img_url: ' ' }}'>
+                    </a>
+                </div>
+                <div class='heading_name'>
+                    <h5><a href="{{ section.settings.link4 }}">{{ section.settings.text4 }}</a></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "product-icon",
+    "settings": [
+        {
+            "type": "text",
+            "id": "section_css_class",
+            "label": "Section CSS Class"
+        },
+        {
+            "id": "Image",
+            "type": "image_picker",
+            "label": "Image"
+        },
+        {
+            "id": "text",
+            "type": "text",
+            "label": "Heading"
+        },
+        {
+            "id": "link1",
+            "type": "url",
+            "label": "Link 1"
+        },
+        {
+            "id": "Image2",
+            "type": "image_picker",
+            "label": "Image"
+        },
+        {
+            "id": "text2",
+            "type": "text",
+            "label": "Heading"
+        },
+        {
+            "id": "link2",
+            "type": "url",
+            "label": "Link 2"
+        },
+        {
+            "id": "Image3",
+            "type": "image_picker",
+            "label": "Image"
+        },
+        {
+            "id": "text3",
+            "type": "text",
+            "label": "Heading"
+        },
+        {
+            "id": "link3",
+            "type": "url",
+            "label": "Link 3"
+        },
+        {
+            "id": "Image4",
+            "type": "image_picker",
+            "label": "Image"
+        },
+        {
+            "id": "text4",
+            "type": "text",
+            "label": "Heading"
+        },
+        {
+            "id": "link4",
+            "type": "url",
+            "label": "Link 4"
+        }
+    ],
+    "presets": [
+        {
+            "name": "product-icons"
+        }
+    ]
+}
+
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

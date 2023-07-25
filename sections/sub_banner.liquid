@@ -1,0 +1,62 @@
+<section class="main_setcion hero_bottom">
+    <div class="container">
+        <div class="sub-banner">
+            <h2>{{ section.settings.heading }}</h2>
+            <div class="narri_sec flex">
+                    <p>
+                      {{ section.settings.text2 }}  
+                    </p>
+                
+                    <p>
+                     {{ section.settings.text4 }}    
+                    </p>
+                  </div>
+
+        </div>
+    </div>
+</section>
+{% schema %}
+ 
+{
+    "name": "sub_banner",
+    "settings": [ 
+        {
+            "id": "heading",
+            "type": "text",
+            "label": "Heading"
+        },
+        {
+            "id": "text2",
+            "type": "textarea",
+            "label": "Content"
+        },
+          {
+            "id": "text4",
+            "type": "textarea",
+            "label": "Content"
+        },
+        {
+            "id": "heading3",
+            "type": "text",
+            "label": "text"
+        }
+      
+    ],
+    "presets": [
+      {
+        "name": "sub_banner",
+        "category": "Text",
+        "settings": {
+
+        }
+      }
+    ]
+  }
+
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

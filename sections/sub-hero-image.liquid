@@ -1,0 +1,46 @@
+<style>
+  .template-page .main-content {
+    padding: 0;
+}
+.sub_hero_image img{
+  width:100%;
+}
+</style>
+ 
+ <div class="sub_hero_image">
+      <div class="sub_hero_image_inner">
+        <img src='{{ section.settings.subImage | img_url: ' ' }}'>
+      </div>
+ </div>
+{% schema %}
+{
+    "name": "subpage-hero-image",
+    "settings": [
+       {
+        "type": "text",
+        "id": "section_css_class",
+        "label": "Section CSS Class"
+      },
+      {
+        "id": "subImage",
+        "type": "image_picker",
+        "label": "Image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "subpage-hero-image",
+        "category": "Text",
+        "settings": {}
+      }
+    ]
+}
+
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+

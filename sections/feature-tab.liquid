@@ -1,0 +1,106 @@
+<div class="{{ section.settings.section_css_class }}">
+    <section class="Feature_sec">
+      <h2>Featured Product </h2>
+        <div class="container">
+            <div class="Featured">
+                <div class="img_box">
+                    <a href="{{ section.settings.link1 }}">
+                       <img src='{{ section.settings.Image | img_url: ' ' }}'>
+                    </a>
+                    <div class="caption">
+                        <h3><a href="{{ section.settings.link1 }}">{{ section.settings.text }} </a></h3>
+                    </div>
+                </div>
+                <div class="img_box">
+                    <a href="{{ section.settings.link2 }}">
+                       <img src='{{ section.settings.Image2 | img_url: ' ' }}'>
+                    </a>
+                    <div class="caption">
+                        <h3><a href="{{ section.settings.link2 }}">{{ section.settings.text2 }}</a></h3>
+                    </div>
+                </div>
+                <div class="img_box">
+                    <a href="{{ section.settings.link3 }}">
+                      <img src='{{ section.settings.Image3 | img_url: ' ' }}'>
+                    </a>
+                    <div class="caption">
+                        <h3><a href="{{ section.settings.link3 }}">{{ section.settings.text3 }}</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% schema %}
+ 
+{
+    "name": "feature-tab",
+    "settings": [
+       {
+        "type": "text",
+        "id": "section_css_class",
+        "label": "Section CSS Class"
+      },
+      {
+        "id": "Image",
+        "type": "image_picker",
+        "label": "Image"
+      },
+      {
+        "id": "text",
+        "type": "text",
+        "label": "Heading"
+      },
+      {
+        "id": "link1",
+        "type": "url",
+        "label": "Product Link 1"
+      },
+      {
+        "id": "Image2",
+        "type": "image_picker",
+        "label": "Image"
+      },
+      {
+        "id": "text2",
+        "type": "text",
+        "label": "Heading"
+      },
+      {
+        "id": "link2",
+        "type": "url",
+        "label": "Product Link 2"
+      },
+      {
+        "id": "Image3",
+        "type": "image_picker",
+        "label": "Image"
+      },
+      {
+        "id": "text3",
+        "type": "text",
+        "label": "Heading"
+      },
+      {
+        "id": "link3",
+        "type": "url",
+        "label": "Product Link 3"
+      }
+    ],
+    "presets": [
+      {
+        "name": "feature-tab",
+        "category": "Text",
+        "settings": {}
+      }
+    ]
+}
+
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

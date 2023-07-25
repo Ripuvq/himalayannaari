@@ -1,0 +1,88 @@
+<section class="main_setcion">
+    <div class="narri_img">
+     <img src='{{ section.settings.Image | img_url: ' ' }}'>
+    </div>
+    <div class="container">
+        <div class="narri_section">
+            <h2>{{ section.settings.heading }}</h2>
+            <div class="narri_sec flex">
+                <div class="left_col nari_dec">
+                    <h3> {{ section.settings.text }}</h3>
+                    <p>
+                      {{ section.settings.text2 }}  
+                    </p>
+                </div>
+                <div class="right_col">
+                    <h3>{{ section.settings.text3 }}</h3>
+                    <p>
+                     {{ section.settings.text4 }}    
+                    </p>
+                </div>
+
+            </div>
+            <div class="learn_more">
+                <a href="{{ section.settings.link }}" class="btn">Learn More</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% schema %}
+ 
+{
+    "name": "narri",
+    "settings": [ 
+      {
+            "id": "Image",
+            "type": "image_picker",
+            "label": "Image"
+        },
+        {
+            "id": "heading",
+            "type": "text",
+            "label": "Heading"
+        },
+       {
+            "id": "text",
+            "type": "text",
+            "label": "Sub Heading"
+        },
+        {
+            "id": "text2",
+            "type": "textarea",
+            "label": "Content"
+        },
+      {
+            "id": "text3",
+            "type": "text",
+            "label": "Sub Heading"
+        },
+       {
+            "id": "text4",
+            "type": "text",
+            "label": "textarea"
+        },
+        {
+            "id": "link",
+            "type": "url",
+            "label": "Link"
+        }
+    ],
+    "presets": [
+      {
+        "name": "narri",
+        "category": "Text",
+        "settings": {
+
+        }
+      }
+    ]
+  }
+
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

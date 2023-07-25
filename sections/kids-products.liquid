@@ -1,0 +1,59 @@
+<section class="kides_product">
+    <div class="kides_collection">
+       <div class="kid_img">
+           <img src='{{ section.settings.Image | img_url: ' ' }}'>
+       </div>
+       <div class="kids">
+          <h2>{{ section.settings.heading }}</h2>
+          <p>{{ section.settings.text }}</p>
+          <div class="main_btn">
+             <a href="{{ section.settings.link }}" class="btn">Quick view</a>
+          </div>
+       </div>
+    </div>
+ </section>
+{% schema %}
+ 
+{
+    "name": "kids-products",
+    "settings": [
+ {
+            "id": "Image",
+            "type": "image_picker",
+            "label": "Image"
+        },
+        {
+            "id": "heading",
+            "type": "text",
+            "label": "Heading"
+        },
+        {
+            "id": "text",
+            "type": "text",
+            "label": "content"
+        },
+        {
+            "id": "link",
+            "type": "url",
+            "label": "Link"
+        }
+   
+    ],
+    "presets": [
+      {
+        "name": "kids-products",
+        "category": "Text",
+        "settings": {
+
+        }
+      }
+    ]
+  }
+
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

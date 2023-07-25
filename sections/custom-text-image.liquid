@@ -1,0 +1,64 @@
+<div class="{{ section.settings.section_css_class }}">
+ <section class="custom_desc">
+  <div class="container">
+      <div class="custom_desc_inner">
+          <div class="col_left">
+                <img src='{{ section.settings.Image | img_url: ' ' }}'>
+          </div>
+          <div class="col_right text_side">
+              <div class="about_text">
+                  <h2>{{ section.settings.heading }}</h2>
+               <p>{{ section.settings.text }}</p>
+              </div>
+          </div>
+      </div>
+    </div>
+</section>
+</div>
+
+
+
+{% schema %}
+ 
+{
+    "name": "custom-text-image",
+    "settings": [
+      {
+        "type": "text",
+        "id": "section_css_class",
+        "label": "Section CSS Class"
+      },
+     {
+            "id": "Image",
+            "type": "image_picker",
+            "label": "Image"
+        },
+        {
+            "id": "heading",
+            "type": "text",
+            "label": "Heading"
+        },
+       {
+            "id": "text",
+            "type": "textarea",
+            "label": "Text"
+        } 
+    ],
+    "presets": [
+      {
+        "name": "custom-text-image",
+        "category": "Text",
+        "settings": {
+
+        }
+      }
+    ]
+  }
+
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
