@@ -51,6 +51,9 @@ section.Feature_sec {
 .flex{
     display: flex;
 }
+body.page-narri-model.template-page section.main-content {
+    padding-top: 0;
+}
 /************ about css start from here ************/
 .about_text .p_text {
     max-width: 634px;
@@ -152,9 +155,20 @@ section.Feature_sec h2 {
 .proud_logo {
     justify-content: center;
     align-items: center;
-    gap: 183px;
+    gap: 40px;
     padding: 40px 0 30px;
+    max-width: 570px;
+    margin: 0 auto;
 }
+section.proud_members h2 {
+    line-height: 1.5;
+  font-size:30px;
+}
+a.site_link {
+    color: #4e87cd !important;
+    font-weight: 500;
+}
+
 .footer_before {
     background: #5B767F;
 }
@@ -1552,7 +1566,7 @@ h2 {
 section.main_setcion .narri_section {
     padding: 20px 0;
 }
- 
+    
 .narri_sec {
     gap: 0px;
     flex-wrap: wrap;
@@ -1628,7 +1642,7 @@ section.main_setcion .narri_section {
     font-style: normal;
     font-weight: 700;
     line-height: 34px;
-    padding-botto: 0;
+    padding-bottom: 0;
 }
 .btn.cart_btn {
 	font-size: 13px !important;
