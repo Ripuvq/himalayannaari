@@ -12,8 +12,19 @@ h2 {
     text-align: center;
     /* line-height: normal; */
 }
-ul.footer--menu li:last-of-type a {
+h3:empty { display: none; }
+/* ul.footer--menu li:nth-child(4) a {
     font-weight: bold;
+} */
+ul.footer--menu li:last-child a {
+    border-radius: 4px;
+    border: 1px solid #39608F;
+    background: #39608F;
+    margin: 0;
+    padding: 5px 25px;
+    color: #fff;
+    display: inline-block;
+    margin-top: 5px;
 }
 p {
     color: #284855;
@@ -60,7 +71,9 @@ body.page-narri-model.template-page section.main-content {
 }
 .about_us {
     gap: 70px;
-    padding: 45px 0;
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
 }
 .about_text .p_text h3 {
     color: #000;
@@ -173,7 +186,7 @@ a.site_link {
     background: #5B767F;
 }
 .himaliyan_nari h3 {
-  font-family: 'Nova Cut', cursive; 
+  /* font-family: 'Nova Cut', cursive;  */
   color: #FFF;
   font-size: 35px;
   font-style: normal;
@@ -194,7 +207,18 @@ section.custum_slider h2 {
     text-align: left;
 }
 
-
+section.about_sec  {
+    display: flex;
+    justify-content: center;
+}
+section.about_sec .about_us .col_left {
+    text-align: center;
+}
+section.about_sec .about_us a.btn {
+    text-align: center;
+    margin-top: 20px;
+    display: block;
+}
 .about_text h2 {
     text-align: left;
     padding-bottom: 20px;
@@ -257,13 +281,13 @@ section.main_setcion .narri_section .narri_sec {
 .header--bottom-row {
 	border-top: 1px solid rgba(91, 118, 127, 0.80);
 	padding-top: 0;
-	margin-top: 14px;
+	margin: 14px 48px 0 48px;
 }
 header .logo-image {
 	max-width: 390px;
 }
 header .header--top-row {
-    height: auto;
+    height: 50px;
 }
 .header--root[data-center-logo='true'] .header--logo {
     position: unset;
@@ -352,6 +376,10 @@ header ul {
     border-bottom: 1px solid;
     padding: 0 0 20px;
     margin: 0 0 40px;
+}
+section.about_sec {
+    margin-top: 0;
+    margin-bottom: 40px;
 }
 .custom_slider h2.font--section-heading a{
     color: #264450;
@@ -1091,6 +1119,52 @@ section.main_setcion.hero_bottom {
 .header--menu.left_sidemenu {
     text-align: center;
 }
+header .header--top-row {
+	justify-content: space-between;
+}
+header .search_icon {
+	width: 100%;
+	max-width: 410px;
+	background: transparent;
+	position: relative;
+	float: left;
+}
+header .search_icon .header--search {
+	position: relative;
+}
+header .search_icon .header--search .icon--root.icon--search {
+	position: absolute;
+	right: 12px;
+	top: 2px;
+	opacity: 0.5;
+}
+header #search_bar {
+	font-size: 16px;
+	text-transform: capitalize;
+	font-family: Nunito Sans,sans-serif;
+    outline: none !important;
+}
+section.about_sec .about_us .col_left {
+    text-align: center;
+    width: 100%;
+}
+section.about_sec {
+    padding: 60px 0;
+}
+.kid_img img {
+    width: 100%;
+}
+
+@media only screen and (min-width: 1200px) { 
+.narri_sec.flex .left_col.nari_dec {
+    width: 100%;
+    text-align: center;
+}
+.narri_sec.flex .right_col {
+   display:none;
+}
+}
+
 @media only screen and (min-width: 768px) and (max-width: 1199px) { 
 header .logo-image {
 	max-width: 240px;
@@ -1114,6 +1188,9 @@ header .logo-image {
 .header--menu.left_sidemenu {
     text-align: center;
 }
+header .search_icon {
+	max-width: 300px;
+}
 }
  
 @media only screen and (min-width: 768px) { 
@@ -1123,9 +1200,13 @@ header .logo-image {
 .header--cart.right_sidemenu {
     justify-content: flex-end;
     display: flex;
-    top: 22px;
+    top: 15px;
 }
-
+header .search_icon {
+    position: relative;
+    top: 15px;
+}
+.search_icon{background: #ddd;padding:8px 48px;}
 .x-menu--level-1--link > a {
     padding: 16px 16px 16px;
 }
@@ -1314,6 +1395,7 @@ h2 {
 }
 .about_us {
 	gap: 30px;
+  padding-top:0;
 	padding: 45px 0;
 }
 }
@@ -1407,6 +1489,29 @@ h2 {
 }
 }
 @media only screen and (max-width: 767px) {
+.section--slideshow .slider .slide .caption {
+    position: absolute;
+    max-width: 350px;
+    padding: 15px;
+    background-color: transparent;
+}
+section.proud_members h2 {
+	font-size: 20px;
+}
+  section.about_sec {
+    margin-bottom: 40px;
+}
+  section.Feature_sec {
+    display: inline-block;
+    margin-top: 40px;
+}
+  .about_us {
+    padding: 0;
+}
+.footer--block.footer_logos .bottomfoot_logo {
+	max-width: 220px;
+  margin: 0 auto;
+}
 .about-image img {
 	max-height: 90px !important;
 }
@@ -1501,12 +1606,26 @@ header .logo-image {
 	padding-top: 0;
 	margin-top: 0;
 }
-.section--slideshow .slider .slide .caption .font--section-heading {
-	font-size: 28px;
-	line-height: 36px !important;
-	color: #264450;
+.section--slideshow .slider .slide .caption .font--section-heading,.section--slideshow .slider .slide .caption > :last-child {
+	font-size: 20px !important;
+	line-height: 26px !important;
+	color: #fff;
 	text-align: center !important;
     margin: 0 !important;
+    padding: 0 !important;
+}
+.index-sections .section--slideshow .slider .owl-pagination .owl-page {
+    background-color: #fff;
+    opacity: 0.6;
+}
+.index-sections .section--slideshow .slider .owl-pagination .owl-page.active {
+    opacity: 1;
+}
+.section--slideshow .slider .slide .caption {
+	padding-bottom: 40px !important;
+}
+.section--slideshow .slider .owl-controls {
+	margin-top: 10px;
 }
 .section--slideshow .slider .owl-pagination {
 	left: 0;
@@ -1566,7 +1685,7 @@ h2 {
 section.main_setcion .narri_section {
     padding: 20px 0;
 }
-    
+ 
 .narri_sec {
     gap: 0px;
     flex-wrap: wrap;
@@ -1608,9 +1727,12 @@ section.main_setcion .narri_section {
   .main_btn,.kides_collection .kids p {
     text-align: center;
 }
-
+.proud_logo.flex img {
+	max-width: 150px;
+	max-height: 50px;
+}
 .proud_logo {
-    padding: 40px 0 20px;
+    padding: 20px 0 20px;
 }
 .himaliyan_nari h3 {
     padding: 15px;
@@ -1638,13 +1760,27 @@ section.main_setcion .narri_section {
 }
   .sub-banner h2 {
     color: #264450;
-    font-size: 25px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
-    line-height: 34px;
+    line-height: 26px;
     padding-bottom: 0;
+    padding-top:30px;
+}
+section.main_setcion.hero_bottom {
+	background: rgba(217,217,217,.3);
+	padding: 0 0 20px;
+}
+.template-index .slider {
+	background: #fff;
+	border-bottom: none;
 }
 .btn.cart_btn {
 	font-size: 13px !important;
 }
+  .header--logo.for_desktop_only { display: none !important; }
+}
+
+.section--slideshow .slider .slide .caption .font--section-heading,.section--slideshow .slider .slide .caption .sub-title {
+    text-transform: unset !important;
 }
